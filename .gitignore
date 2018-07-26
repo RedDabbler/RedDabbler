@@ -9,7 +9,9 @@ buildNumber.properties
 .mvn/timing.properties
 
 *.idea
-
+*.iws
+*.iml
+*.ipr
 */target/*
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)

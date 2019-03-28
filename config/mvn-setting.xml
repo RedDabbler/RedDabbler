@@ -283,6 +283,11 @@ under the License.
                 </snapshots>
                 <layout>default</layout>
             </repository>
+             <!--dorado repository-->
+            <repository>
+        		<id>bsdn-maven-repository</id>
+        		<url>http://nexus.bsdn.org/content/groups/public/</url>
+        	 </repository>
         </repositories>
     </profile>
   </profiles>

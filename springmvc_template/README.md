@@ -1,7 +1,8 @@
-
+#### springMVC+MyBatis代码模板
 - MVC依赖包
- spring-webmvc包里spring-framework的那些基本包，只用一个就可以了
-
+  spring-webmvc包里spring-framework的那些基本包，只用一个就可以
+- MyBatis 
+- Druid
 
 
 

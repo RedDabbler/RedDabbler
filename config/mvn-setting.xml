@@ -53,7 +53,7 @@ under the License.
 
   <localRepository>/path/to/local/repo</localRepository>
    -->
-
+  <localRepository>F:\\repository</localRepository>
 
   <!-- interactiveMode
    | This will determine whether maven prompts you when it needs input. If set to false,
@@ -134,6 +134,17 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
+    <!--连接个人私仓-->
+    <server>
+        <id>rdc-releases</id>
+        <username>5f15047f004c4c8b7c8a8723</username>
+        <password>x2RdjzrXLjMQ</password>
+    </server>
+    <server>
+        <id>rdc-snapshots</id>
+        <username>5f15047f004c4c8b7c8a8723</username>
+        <password>x2RdjzrXLjMQ</password>
+    </server>
   </servers>
 
   <!-- mirrors
@@ -160,12 +171,12 @@ under the License.
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
-    <mirror>
-      <id>alimaven</id>
-      <name>aliyun maven</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-      <mirrorOf>central</mirrorOf>
-    </mirror>
+     <mirror>
+       <id>mirror</id>
+       <mirrorOf>central,jcenter,!rdc-releases,!rdc-snapshots</mirrorOf>
+       <name>mirror</name>
+       <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+     </mirror>
     <mirror>
         <id>central</id>
         <name>Maven Repository Switchboard</name>
@@ -286,12 +297,136 @@ under the License.
     </profile>
     -->
     <profile>
+             <id>rdc</id>
+             <properties>
+                 <altReleaseDeploymentRepository>
+                     rdc-releases::default::https://packages.aliyun.com/maven/repository/2019569-release-O7Ou6V/
+                 </altReleaseDeploymentRepository>
+                 <altSnapshotDeploymentRepository>
+                     rdc-snapshots::default::https://packages.aliyun.com/maven/repository/2019569-snapshot-no5BoC/
+                 </altSnapshotDeploymentRepository>
+             </properties>
+             <repositories>
+                 <repository>
+                     <id>central</id>
+                     <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+                     <releases>
+                         <enabled>true</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>false</enabled>
+                     </snapshots>
+                 </repository>
+                 <repository>
+                     <id>snapshots</id>
+                     <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+                     <releases>
+                         <enabled>false</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>true</enabled>
+                     </snapshots>
+                 </repository>
+                 <repository>
+                     <id>rdc-releases</id>
+                     <url>https://packages.aliyun.com/maven/repository/2019569-release-O7Ou6V/</url>
+                     <releases>
+                         <enabled>true</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>false</enabled>
+                     </snapshots>
+                 </repository>
+                 <repository>
+                     <id>rdc-snapshots</id>
+                     <url>https://packages.aliyun.com/maven/repository/2019569-snapshot-no5BoC/</url>
+                     <releases>
+                         <enabled>false</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>true</enabled>
+                     </snapshots>
+                 </repository>
+             </repositories>
+             <pluginRepositories>
+                 <pluginRepository>
+                     <id>central</id>
+                     <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+                     <releases>
+                         <enabled>true</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>false</enabled>
+                     </snapshots>
+                 </pluginRepository>
+                 <pluginRepository>
+                     <id>snapshots</id>
+                     <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+                     <releases>
+                         <enabled>false</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>true</enabled>
+                     </snapshots>
+                 </pluginRepository>
+                 <pluginRepository>
+                     <id>rdc-releases</id>
+                     <url>https://packages.aliyun.com/maven/repository/2019569-release-O7Ou6V/</url>
+                     <releases>
+                         <enabled>true</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>false</enabled>
+                     </snapshots>
+                 </pluginRepository>
+                 <pluginRepository>
+                     <id>rdc-snapshots</id>
+                     <url>https://packages.aliyun.com/maven/repository/2019569-snapshot-no5BoC/</url>
+                     <releases>
+                         <enabled>false</enabled>
+                     </releases>
+                     <snapshots>
+                         <enabled>true</enabled>
+                     </snapshots>
+                 </pluginRepository>
+             </pluginRepositories>
+         </profile>
+    <profile>
         <id>default</id>
         <activation>
             <activeByDefault>true</activeByDefault>
             <!-- <jdk>1.8</jdk> -->
         </activation>
         <repositories>
+          <repository>
+    				<id>central</id>
+    				<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    				<releases>
+    					<enabled>true</enabled>
+    				</releases>
+    				<snapshots>
+    					<enabled>false</enabled>
+    				</snapshots>
+    			</repository>
+    			<repository>
+    				<id>snapshots</id>
+    				<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    				<releases>
+    					<enabled>false</enabled>
+    				</releases>
+    				<snapshots>
+    					<enabled>true</enabled>
+    				</snapshots>
+    			</repository>
+          <repository>
+    				<id>hsweb-nexus</id>
+    				<name>Nexus Release Repository</name>
+    				<url>https://nexus.hsweb.me/content/groups/public/</url>
+    				<snapshots>
+    					<enabled>true</enabled>
+    					<updatePolicy>always</updatePolicy>
+    				</snapshots>
+    			</repository>
             <repository>
                 <id>spring-milestone</id>
                 <name>Spring Milestone Repository</name>
@@ -322,6 +457,28 @@ under the License.
         		<url>http://nexus.bsdn.org/content/groups/public/</url>
         	 </repository>
         </repositories>
+        <pluginRepositories>
+    			<pluginRepository>
+    				<id>central</id>
+    				<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    				<releases>
+    					<enabled>true</enabled>
+    				</releases>
+    				<snapshots>
+    					<enabled>false</enabled>
+    				</snapshots>
+    			</pluginRepository>
+    			<pluginRepository>
+    				<id>snapshots</id>
+    				<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    				<releases>
+    					<enabled>false</enabled>
+    				</releases>
+    				<snapshots>
+    					<enabled>true</enabled>
+    				</snapshots>
+    			</pluginRepository>
+        </pluginRepositories>
     </profile>
   </profiles>
 

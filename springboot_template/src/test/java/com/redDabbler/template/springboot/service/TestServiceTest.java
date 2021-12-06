@@ -8,11 +8,5 @@ import static org.junit.Assert.*;
 
 public class TestServiceTest extends BaseTest {
 
-    @Autowired
-    private TestService testService;
 
-    @Test
-    public void getById() {
-        testService.getById(1);
-    }
 }

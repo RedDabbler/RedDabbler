@@ -5,6 +5,10 @@ import com.redDabbler.template.springboot.common.Page;
 import com.redDabbler.template.springboot.common.Result;
 import com.redDabbler.template.springboot.entity.BillHistory;
 import com.redDabbler.template.springboot.service.BillHistoryService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -21,11 +25,17 @@ import java.util.List;
  */
 @RequestMapping("/api/v1/")
 @RestController
+@Api(value = "处理账单")
 public class BillHistoryController {
 
     @Autowired
     private BillHistoryService billHistoryService;
 
+    @ApiOperation(value="获取账单列表", notes="")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="type",value="类型",required=true,paramType="form",dataType="int"),
+            @ApiImplicitParam(name="source",value="来源",required=true,paramType="form",dataType="int")
+    })
     @GetMapping(value = "/bill",produces = MediaType.APPLICATION_JSON_VALUE)
     public Result<?> list(@RequestParam(required = false) BillHistory billHistory){
         List<BillHistory> billHistoryList =  billHistoryService.list(billHistory);

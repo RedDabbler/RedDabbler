@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.redDabbler.template</groupId>
-    <artifactId>springboot_template</artifactId>
+    <artifactId>springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->

@@ -10,7 +10,10 @@
     <packaging>war</packaging>
 
     <properties>
-        <springVersion>4.3.25.RELEASE</springVersion>
+        <springVersion>5.2.18.RELEASE</springVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -71,7 +74,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>0.2.26</version>
+            <version>1.1.10</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -88,7 +91,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.16</version>
+            <version>8.0.20</version>
         </dependency>
     </dependencies>
 
@@ -99,8 +102,19 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>
+                        8000
+                    </port>
+                    <path>/</path>
                 </configuration>
             </plugin>
         </plugins>

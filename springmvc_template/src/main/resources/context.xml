@@ -26,7 +26,7 @@
     </bean>
 
     <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/demo" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3307/demo?useSSL=false" />
         <property name="username" value="root" />
         <property name="password" value="123456" />
         <property name="initialSize" value="0" />

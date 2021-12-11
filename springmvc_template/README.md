@@ -1,4 +1,5 @@
-#### springMVC+MyBatis代码模板
+#### springmvc
+- [ ] 改为零配置SpringMVC项目
 - MVC依赖包
   spring-webmvc包里spring-framework的那些基本包，只用一个就可以
 - MyBatis 
@@ -7,4 +8,4 @@
 
 
 - 官方文档
-  - [参考4.3.25](https://docs.spring.io/spring/docs/4.3.25.RELEASE/spring-framework-reference/htmlsingle/)
+  - [参考5.2.18](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#spring-web)

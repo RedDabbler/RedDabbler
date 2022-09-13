@@ -2,12 +2,10 @@
 
 ### I'm RedDabbler :older_man:
 
-- :memo: Java开发者 世界上最好的语言 :ferris_wheel: 造轮子爱好者
-- :shell: Python爱好者 :bug:爬虫
-- :computer: 虚拟机爱好者--Win/Linux系统
-- :computer: 服务器搭建者--各种数据库 web等等服务器
-- :book: 读书爱好者 :imp: 八股文学习 :sob: 持续学习
-- :raising_hand: :stuck_out_tongue_winking_eye: 内卷和被内卷的受害者
+- :memo: Javaer :ferris_wheel: wheeler
+- :shell: Python :bug:Crawling
+- :book: Reading  :sob: 
+- :raising_hand: :stuck_out_tongue_winking_eye: involution
 
 ### 计划 :calendar:
 - :new_moon: I’m currently learning data structure

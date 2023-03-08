@@ -4,7 +4,7 @@
 
 - :memo: Javaer :ferris_wheel: wheeler
 - :shell: Python :bug:Crawling
-- :book: Reading  :sob: 
+- :book: Reading   
 - :raising_hand: :stuck_out_tongue_winking_eye: involution
 
 ### 计划 :calendar:

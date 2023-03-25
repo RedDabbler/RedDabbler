@@ -8,9 +8,10 @@
 - :raising_hand: :stuck_out_tongue_winking_eye: involution
 
 ### 计划 :calendar:
-- :new_moon: I’m currently learning data structure
-- :new_moon: I will coding sales system for somethings
-- :new_moon: I’m currently learning big data related things
+- 🌙: learning data structure
+- 🌑: coding sales system for somethings
+- 🌑: learning big data related things
+- 🌑: information system management
 
 
 

@@ -2,7 +2,7 @@
 
 ### I'm a coder :older_man:
 
-- :memo: Javaer :ferris_wheel: wheeler
+- :memo: Javaer、Scalaer :ferris_wheel: wheeler
 - :shell: Python :bug:Crawling
 - :book: Reading   
 - :raising_hand: :stuck_out_tongue_winking_eye: involution

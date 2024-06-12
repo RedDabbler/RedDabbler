@@ -1,9 +1,0 @@
-*.class
-.idea
-.DS_Store
-.DS_Store?
-/**/target
-*.iml
-.idea/*
-*.eml
-*.classpath

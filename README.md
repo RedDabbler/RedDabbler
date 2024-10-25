@@ -7,11 +7,11 @@
 - :book: Reading   
 - :raising_hand: :stuck_out_tongue_winking_eye: involution
 
-### 计划 :calendar:
-- 🌙: learning data structure
-- 🌑: coding sales system for somethings
-- 🌑: learning big data related things
-- 🌑: information system management
+###  :calendar:
+- 🌙: 
+- 🌑: 
+- 🌑: 
+- 🌑: 
 
 
 
